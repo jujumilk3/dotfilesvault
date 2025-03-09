@@ -1,8 +1,6 @@
-use anyhow::Result;
-use log::debug;
 use std::path::{Path, PathBuf};
 
-use crate::{Config, DotfilesError};
+use crate::Config;
 
 /// Expand a tilde in a path to the home directory
 pub fn expand_tilde<P: AsRef<Path>>(path: P) -> PathBuf {

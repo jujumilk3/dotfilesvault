@@ -3,7 +3,7 @@ use chrono::{DateTime, Local, TimeZone};
 use git2::{Repository, Signature};
 use log::{debug, info};
 use std::fs;
-use std::path::{Path, PathBuf};
+use std::path::Path;
 
 use crate::backup::Dotfile;
 use crate::{Config, DotfilesError};

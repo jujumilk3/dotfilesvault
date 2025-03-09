@@ -3,10 +3,10 @@ use clap::{Parser, Subcommand};
 use log::{LevelFilter, debug, error, info};
 use std::process;
 
+use dotfilesvault::Config;
 use dotfilesvault::backup::{backup_all_dotfiles, backup_specific_dotfiles};
 use dotfilesvault::history::{commit_changes, get_dotfile_history};
 use dotfilesvault::restore::{list_backed_up_dotfiles, restore_specific_dotfile};
-use dotfilesvault::{Config, DotfilesError};
 
 /// Dotfilesvault - A tool for backing up and managing dotfiles with version history
 #[derive(Parser, Debug)]
