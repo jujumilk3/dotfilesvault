@@ -2,5 +2,28 @@
 name = "dotfilesvault"
 version = "0.1.0"
 edition = "2024"
+authors = ["Dotfilesvault Team"]
+description = "A tool for backing up and managing dotfiles with version history"
+license = "MIT"
 
 [dependencies]
+clap = { version = "4.4", features = [
+    "derive",
+] } # Command line argument parsing
+dirs = "5.0" # Cross-platform directories
+walkdir = "2.4" # Directory traversal
+chrono = "0.4" # Date and time functionality
+serde = { version = "1.0", features = [
+    "derive",
+] } # Serialization/deserialization
+serde_json = "1.0" # JSON support
+anyhow = "1.0" # Error handling
+thiserror = "1.0" # Error definitions
+git2 = "0.18" # Git operations for versioning
+log = "0.4" # Logging
+env_logger = "0.10" # Logging implementation
+
+[dev-dependencies]
+tempfile = "3.8"   # Temporary file/directory creation for tests
+assert_fs = "1.0"  # Filesystem assertions for tests
+predicates = "3.0" # Predicates for assertions
